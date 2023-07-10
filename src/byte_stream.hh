@@ -12,6 +12,10 @@ class ByteStream
 {
 protected:
   uint64_t capacity_;
+  uint64_t current_capacity;
+  bool is_eof, is_err;
+  uint64_t total_in, total_out;
+  std::queue<char> db;
   // Please add any additional state to the ByteStream here, and not to the Writer and Reader interfaces.
 
 public:
