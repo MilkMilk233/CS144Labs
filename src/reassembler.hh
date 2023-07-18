@@ -6,6 +6,12 @@
 
 class Reassembler
 {
+private:
+  std::vector<char> inner_storage;
+  std::vector<char> status;
+  int index;
+  int stored;
+
 public:
   /*
    * Insert a new substring to be reassembled into a ByteStream.
