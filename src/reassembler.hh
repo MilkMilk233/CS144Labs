@@ -9,10 +9,13 @@ class Reassembler
 private:
   std::vector<char> inner_storage;
   std::vector<char> status;
-  int index;
-  int stored;
+  uint64_t index;
+  uint64_t stored;
+  uint64_t capacity;
+  bool is_last;
 
 public:
+  Reassembler();
   /*
    * Insert a new substring to be reassembled into a ByteStream.
    *   `first_index`: the index of the first byte of the substring
